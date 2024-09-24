@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
+}
+
+@mixin contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@mixin display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin boton {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: v.$bold;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    background-color: v.$dark;
+}
