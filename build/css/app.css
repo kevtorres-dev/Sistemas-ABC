@@ -431,8 +431,8 @@ h1, .enlaces {
 @media (min-width: 480px) {
   .intro {
     position: relative;
-    min-width: 80rem;
-    max-width: 130rem;
+    min-width: 50rem;
+    max-width: 90rem;
     overflow: hidden;
     margin: 0 auto;
   }
@@ -451,6 +451,18 @@ h1, .enlaces {
 @media (min-width: 480px) and (min-width: 1200px) {
   .intro img {
     height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .intro {
+    min-width: 60rem;
+    max-width: 110rem;
+  }
+}
+@media (min-width: 1400px) {
+  .intro {
+    min-width: 80rem;
+    max-width: 130rem;
   }
 }
 
@@ -478,7 +490,7 @@ h1, .enlaces {
 }
 @media (min-width: 1200px) {
   .intro-texto h2 {
-    font-size: 7rem;
+    font-size: 6rem;
     margin-top: 3.5rem;
   }
 }

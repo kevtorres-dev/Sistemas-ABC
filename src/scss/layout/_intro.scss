@@ -6,8 +6,8 @@
 
     @include m.telefono {
         position: relative;
-        min-width: 80rem;
-        max-width: 130rem;
+        min-width: 50rem;
+        max-width: 90rem;
         overflow: hidden;
         margin: 0 auto;    
     
@@ -26,6 +26,16 @@
                 height: 100%;
             }
         }
+    }
+
+    @include m.desktop {
+        min-width: 60rem;
+        max-width: 110rem;
+    }
+
+    @include m.desktopXL {
+        min-width: 80rem;
+        max-width: 130rem;
     }
 }
 
@@ -54,7 +64,7 @@
     
     @include m.desktop {
         h2 {
-            font-size: 7rem;
+            font-size: 6rem;
             margin-top: 3.5rem;
         }
     }
