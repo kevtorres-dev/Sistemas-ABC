@@ -1,61 +1,123 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+.open-menu,
+.close-menu {
+    display: none;
+}
 
 .header {
-    background-color: v.$color;
+    background-color: v.$dark-mode-nav;
+    padding: 1.2rem;
 
-    @include m.telefono {
-        .contenido-header {
-            @include m.contenedor;
-            @include m.display-flex;
-            padding: 1.7rem;
-        }
-    }
+    .contenido-header {
+        @include m.contenedor;
+        @include m.display-flex;
 
-
-    h1 {
-        @include m.telefono {
-            font-size: 2.5rem;
+        h1 {
+            font-size: 2.8rem;
+            color: v.$white
         }
 
         @include m.tablet {
-            font-size: 4rem;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @include m.desktop {
+            h1 {
+                font-size: 3.5rem;
+            }
         }
     }
 }
 
-h1, .enlaces {
-    color: v.$white
+
+
+.open-menu,
+.close-menu {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    filter: invert(100%);
 }
 
-.navegacion {
-    @include m.telefono {
-        display: flex;
-        gap: 3rem;
-    }
+.close-menu {
+    align-self: flex-end;
+    margin: 0.5rem 2.4rem;
+    height: 60px;
+    width: 60px;
+}
 
-    @include m.desktop {
-        gap: 4rem;
+.open-menu:focus:not(:focus-visible),
+.close-menu:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@include m.tablet {
+    .open-menu,
+    .close-menu {
+        display: none;
     }
+}
+
+
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: v.$dark-mode-nav;
+    gap: 3rem;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    @include m.tablet {
+        flex-direction: row;
+        position: relative;
+        opacity: 1;
+        height: auto;
+        background: none;
+        top: auto;
+        left: auto;
+        width: auto;
+        pointer-events: all;
+
+    }
+}
+
+.menu_opened{
+    opacity: 1;
+    pointer-events: all;
 }
 
 .enlaces {
-    font-weight: v.$medium;
-
-    @include m.telefono {
-        font-size: 2.2rem;
-    }
+    color: v.$white;
+    font-weight: v.$bold;
+    font-size: 4.2rem;
 
     @include m.tablet {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        font-weight: v.$medium;
     }
 
     @include m.desktop {
-        font-size: 2.8rem;
+        font-size: 2.7rem;
     }
 
     &:hover {
-        color: v.$white;
+        color: v.$hover;
     }
 }
+
