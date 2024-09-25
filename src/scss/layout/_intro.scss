@@ -6,44 +6,30 @@
 
     @include m.telefono {
         position: relative;
-        min-width: 50rem;
-        max-width: 90rem;
+        min-height: 50rem;
+        max-height: 75rem;
         overflow: hidden;
-        margin: 0 auto;    
     
         .overlay {
             position: absolute;
             inset: 0;
-            top: 40%;
             display: flex;
             align-items: center;
         }
     
         img {
             display: block;
-            height: auto;
+            width: auto;
             @include m.desktop {
-                height: 100%;
+                width: 100%;
             }
         }
-    }
-
-    @include m.desktop {
-        min-width: 60rem;
-        max-width: 110rem;
-    }
-
-    @include m.desktopXL {
-        min-width: 80rem;
-        max-width: 130rem;
     }
 }
 
 .intro-texto {
     z-index: 10;
     @include m.contenedor;
-
-
 
     h2 {
         color: v.$white;
@@ -52,24 +38,23 @@
 
     @include m.telefono {
         h2 {
-            font-size: 4rem;
+            font-size: 3rem;
             width: 60%;
+        }
+    } 
+    
+    @include m.tablet {
+        h2 {
+            font-size: 3.7rem;
             margin-top: 3rem;
         }
-    }
-
-    @include m.tablet {
-        font-size: 5rem;
-    }
+    }  
     
     @include m.desktop {
         h2 {
-            font-size: 6rem;
-            margin-top: 3.5rem;
+            font-size: 5rem;
         }
-    }
-    
-    
+    }  
 }
 
 .whatsapp {

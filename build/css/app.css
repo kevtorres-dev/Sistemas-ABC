@@ -431,38 +431,24 @@ h1, .enlaces {
 @media (min-width: 480px) {
   .intro {
     position: relative;
-    min-width: 50rem;
-    max-width: 90rem;
+    min-height: 50rem;
+    max-height: 75rem;
     overflow: hidden;
-    margin: 0 auto;
   }
   .intro .overlay {
     position: absolute;
     inset: 0;
-    top: 40%;
     display: flex;
     align-items: center;
   }
   .intro img {
     display: block;
-    height: auto;
+    width: auto;
   }
 }
 @media (min-width: 480px) and (min-width: 1200px) {
   .intro img {
-    height: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .intro {
-    min-width: 60rem;
-    max-width: 110rem;
-  }
-}
-@media (min-width: 1400px) {
-  .intro {
-    min-width: 80rem;
-    max-width: 130rem;
+    width: 100%;
   }
 }
 
@@ -478,20 +464,19 @@ h1, .enlaces {
 }
 @media (min-width: 480px) {
   .intro-texto h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 60%;
-    margin-top: 3rem;
   }
 }
 @media (min-width: 768px) {
-  .intro-texto {
-    font-size: 5rem;
+  .intro-texto h2 {
+    font-size: 3.7rem;
+    margin-top: 3rem;
   }
 }
 @media (min-width: 1200px) {
   .intro-texto h2 {
-    font-size: 6rem;
-    margin-top: 3.5rem;
+    font-size: 5rem;
   }
 }
 
