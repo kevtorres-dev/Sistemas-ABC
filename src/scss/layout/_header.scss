@@ -33,13 +33,11 @@
     }
 }
 
-
-
 .open-menu,
 .close-menu {
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     border: none;
     background: none;
     cursor: pointer;
@@ -48,7 +46,7 @@
 
 .close-menu {
     align-self: flex-end;
-    margin: 0.5rem 2.4rem;
+    margin: 1rem 2.8rem;
     height: 60px;
     width: 60px;
 }
@@ -65,8 +63,6 @@
     }
 }
 
-
-
 .navegacion {
     display: flex;
     flex-direction: column;
@@ -82,6 +78,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
+    z-index: 1000;
 
     @include m.tablet {
         flex-direction: row;
@@ -93,7 +90,6 @@
         left: auto;
         width: auto;
         pointer-events: all;
-
     }
 }
 
@@ -120,4 +116,3 @@
         color: v.$hover;
     }
 }
-

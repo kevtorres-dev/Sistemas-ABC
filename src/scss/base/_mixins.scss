@@ -37,11 +37,19 @@
 }
 
 @mixin boton {
-    display: inline-block;
-    font-size: 3rem;
-    font-weight: v.$bold;
-    color: white;
+    display: block;
     padding: 1.5rem;
     border-radius: 2rem;
     background-color: v.$dark;
+    font-size: 3rem;
+    font-weight: v.$bold;
+    color: v.$white;
+    text-align: center;
+}
+
+@mixin texto-centrado($size) {
+    color: v.$white;
+    text-align: center;
+    font-size: $size;
+    margin: 2rem 0;
 }
