@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cards {
+    @include m.contenedor;
+    display: grid;
+    gap: 1.3rem;
+    @include m.telefono {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    @include m.desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.cards-item {
+    background-color: v.$dark-mode-nav;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    @include m.tablet {
+        padding: 2.5rem 2rem;
+    }
+
+    img {
+        height: 5.5rem;
+        width: 5.5rem;
+        margin: 1.5rem auto 3rem auto;
+        filter: invert(100%);
+    }
+}
+
+.cards-item-texto {
+    @include m.texto-centrado(2rem);
+    margin: 0;
+
+    h4 {
+        margin-bottom: 1.2rem;
+    }
+}

@@ -3,21 +3,36 @@
 
 .intro {
     @include m.contenedor;
-    margin-top: 3rem;
-
     h2 {
         @include m.texto-centrado(4rem);
-        @include m.tablet {
+        @include m.desktop {
             text-align: left;
-            max-width: 55%;
         }
+
+        @include m.desktop {
+            font-size: 3.5rem;
+            max-width: 80%;
+        }
+
+        @include m.desktopXL{
+            font-size: 4rem;
+        }
+
     }
 
     p {
         @include m.texto-centrado(2.7rem);
-        @include m.tablet {
+        @include m.desktop {
             text-align: left;
-            max-width: 55%;
+        }
+
+        @include m.desktop {
+            font-size: 2rem;
+            max-width: 80%;
+        }
+
+        @include m.desktopXL {
+            font-size: 2.7rem;
         }
     }
 
@@ -29,19 +44,25 @@
 
     .btn-whatsapp {
         @include m.boton;
+        width: 100%;
         background-color: v.$whatsapp;
-        margin: 3rem 0;
+        margin: 3rem auto;
         gap: 1rem;
-        font-size: 2.7rem;
+        font-size: 2.4rem;
+
+        @include m.telefono {
+            width: 85%;
+            font-size: 3rem;
+        }
 
         @include m.tablet {
             display: inline-block;
-            font-size: 3rem;
-            margin: 2rem 0;
+            font-size: 2.5rem;
+            margin: 2rem auto;
         }
 
-        @include m.telefono {
-            font-size: 3rem;
+        @include m.desktop {
+            margin: 2rem 0;
         }
     }
 
@@ -69,7 +90,7 @@
         text-decoration: underline;
         cursor: pointer;
 
-        @include m.tablet {
+        @include m.desktop {
             display: inline-block;
             text-align: left;
         }
@@ -77,5 +98,37 @@
         &:hover {
             color: v.$white;
         }
+    }
+}
+
+.contenido-intro {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    @include m.desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem auto 0 auto;
+        width: 90%;
+        max-width: 110rem;
+    }
+
+    @include m.desktopXL {
+        max-width: 130rem;
+    }
+}
+
+.intro-imagen {
+    width: 100%;
+    padding-top: 4rem;
+
+    @include m.tablet {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    @include m.desktop {
+        width: 50%;
     }
 }

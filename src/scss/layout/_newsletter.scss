@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.newsletter-contenedor {
+    background-color: v.$dark-mode-alt;
+    border-radius: 2rem;
+    @include m.contenedor;
+    padding: 2rem;
+    display: grid;
+    @include m.desktop {
+        gap: 4rem;
+        padding: 3.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+.newsletter-texto {
+    @include m.texto-centrado(1.5rem);
+    @include m.desktop {
+        text-align: left;
+    }
+
+    h3, p {
+        color: v.$white;
+    }
+
+    h3 {
+        font-weight: v.$bold;
+        font-size: 2.5rem;
+        @include m.desktop {
+            max-width: 90%;
+        }
+    }
+
+    p {
+        margin: 2rem 0;
+        font-size: 2.2rem;
+        @include m.desktop {
+            font-size: 2.5rem;
+            max-width: 90%;
+        }
+    }
+}
+
+.input {
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 65rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    @include m.tablet {
+        height: 4.2rem;
+        font-size: 2.2rem;
+        padding: 0.5rem;
+    }
+}
+
+.boton {
+    @include m.boton;
+    background-color: v.$dark-mode-nav;
+    display: inline-block;
+    width: 100%;
+    border-radius: 0.7rem;
+    font-size: 2.5rem;
+    font-weight: v.$medium;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.newsletter-imagen {
+    img {
+        border-radius: 1rem;
+    }
+}

@@ -38,7 +38,7 @@
 
 @mixin boton {
     display: block;
-    padding: 1.5rem;
+    padding: 1.1rem;
     border-radius: 2rem;
     background-color: v.$dark;
     font-size: 3rem;
@@ -51,5 +51,5 @@
     color: v.$white;
     text-align: center;
     font-size: $size;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }

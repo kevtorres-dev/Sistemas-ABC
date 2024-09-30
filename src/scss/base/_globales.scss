@@ -53,10 +53,8 @@ img {
     display: block;
 }
 
-@include m.tablet {
-    body > section {
-        padding: 5rem 0;
-    }
+body > section {
+    padding: 3rem 0;
 }
 
 .no-margin {

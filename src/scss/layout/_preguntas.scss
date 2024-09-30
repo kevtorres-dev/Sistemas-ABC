@@ -1,0 +1,42 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.preguntas {
+    @include m.contenedor;
+
+    h2 {
+        @include m.texto-centrado(3rem);
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+}
+
+.preguntas-contenedor {
+    font-size: 2.3rem;
+    color: v.$white;
+    text-align: center;
+    
+    @include m.tablet {
+        text-align: left;
+    }
+
+    details {
+        background-color: v.$dark-mode-alt;
+        padding: 2rem;
+        border-radius: 2rem;
+        margin: 2rem 0;
+        @include m.tablet {
+            padding: 2rem 2rem 2rem 4rem;
+        }
+    }
+
+    summary {
+        list-style: none;
+        font-weight: v.$medium;
+    }
+
+    p {
+        font-size: 1.9rem;
+    }
+}
