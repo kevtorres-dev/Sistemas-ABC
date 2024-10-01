@@ -3,6 +3,7 @@
 
 .videos {
     @include m.contenedor;
+    margin-bottom: 4rem;
     h2 {
         @include m.texto-centrado(3rem);
         @include m.tablet {

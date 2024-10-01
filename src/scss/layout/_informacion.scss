@@ -85,4 +85,10 @@
         font-size: 2.3rem;
         font-weight: v.$bold;
     }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

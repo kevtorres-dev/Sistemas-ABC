@@ -3,6 +3,7 @@
 
 .preguntas {
     @include m.contenedor;
+    padding-top: 2rem;
 
     h2 {
         @include m.texto-centrado(3rem);
@@ -26,6 +27,7 @@
         padding: 2rem;
         border-radius: 2rem;
         margin: 2rem 0;
+        cursor: pointer;
         @include m.tablet {
             padding: 2rem 2rem 2rem 4rem;
         }

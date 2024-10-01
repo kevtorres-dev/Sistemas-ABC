@@ -105,13 +105,15 @@
     display: flex;
     flex-direction: column;
     height: auto;
+    padding-top : 9rem;
     @include m.desktop {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 3rem auto 0 auto;
         width: 90%;
         max-width: 110rem;
+        height: 75vh;
+        margin: 0 auto;
     }
 
     @include m.desktopXL {
@@ -130,5 +132,9 @@
 
     @include m.desktop {
         width: 50%;
+
+        img {
+            border-radius: 1rem;
+        }
     }
 }
