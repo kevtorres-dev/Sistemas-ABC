@@ -5,6 +5,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-padding-top: 0rem;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -54,9 +55,10 @@ img {
 
 body > section {
     padding: 4rem 0;
-    @include m.desktop {
-        padding: 7rem 0;
-    }
+}
+
+section[id] {
+    scroll-margin-top: 3rem;
 }
 
 .no-margin {
