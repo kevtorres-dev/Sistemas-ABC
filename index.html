@@ -14,19 +14,19 @@
         rel="stylesheet">
 
     <!-- Enlace a los archivos CSS Principales -->
-    <link rel="preload" href="src/css/main.css" as="style" />
     <link rel="stylesheet" href="src/css/main.css">
 
-    <link rel="preload" href="src/css/normalize.css" as="style" />
     <link rel="stylesheet" href="src/css/normalize.css">
     <!-- Enlace a los archivos CSS Secundarios -->
     <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/inicio.css">
+    <link rel="stylesheet" href="src/css/informacion.css">
 </head>
 
 <body>
     <header class="header">
         <div class="contenedor header-contenido">
-            <a href="/" target="_blank" class="logo">
+            <a href="/" class="logo">
                 Sistemas <span class="logo-bold">ABC</span>
             </a>
             <button class="open-menu" aria-label="Abrir Menú">
@@ -49,13 +49,108 @@
     </header>
 
     <section id="inicio">
+        <div class="contenedor inicio">
+            <div class="inicio-texto">
+                <h2 class="no-margin">La herramienta contable que hace tu trabajo más sencillo.</h2>
+                <p class="no-margin">
+                    Si buscas una opción para poder optimizar tu trabajo como Contador, queremos presentarte nuestro sistema contable el cual ha sido desarrollado para ser uno de los más fáciles del mercado.
+                </p>
+            </div>
+            <div class="inicio-enlaces">
+                <button type="button" id="btn-video" class="boton">
+                    Ver un Video Introductorio (1:48)
+                </button>
 
+                <a href="https://bit.ly/Sistemas-ABC" target="_blank" class="boton boton-fondo">
+                    Envienos un mensaje
+                </a>
+            </div>
+
+            <div class="inicio-bloque">
+                <div class="inicio-bloque-texto">
+                    <p class="no-margin">
+                        Nuestro sistema cuenta con 2 módulos diferentes <span class="bold">Contabilidad</span> y <span class="bold">Facturación</span>, los cuales trabajan de manera independiente, y pueden mejorar su trabajo diario.
+                    </p>
+                </div>
+
+                <picture>
+                    <source srcset="src/img/man.webp" type="image/webp">
+                    <img src="src/img/Man.png" alt="Imagen intro">
+                </picture>
+            </div>
+
+            <div id="contenedor-video-cover">
+                <div id="contenido-video">
+                    <div id="cerrar-video">
+                        <picture>
+                            <source srcset="src/img/icons/x.webp" type="image/webp">
+                            <img src="src/img/icons/x.png" alt="Botón Cerrar">
+                        </picture>
+                    </div>
+                    <iframe id="video" src="https://www.youtube.com/embed/dEYHCHgxTgI?si=C7iryBPklVTR5Y-y"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="informacion">
+        <div class="contenedor informacion">
+            <h2 class="no-margin">Información</h2>
+            <div class="informacion-texto">
+                <p class="no-margin">
+                    <span class="logo">Sistemas</span> <span class="logo-bold">ABC</span> fue fundado en 2010,
+                    como una alternativa para que contadores de Centro América pudiesen optimizar su trabajo. Como
+                    resultado de ese objetivo hemos logrado desarrollar una aplicación que no solamente facilita el
+                    ingreso de los datos contables, sino que también asegura la precisión de su información.
+                </p>
 
+                <p class="no-margin">
+                    Nuestro equipo está comprometido a hacer de su contabilidad una experiencia menos estresante y
+                    complicada, por esto el diseño de nuestras pantallas, y reportes, son sencillas, y fáciles de usar.
+                    Creamos nuestro sistema pensando que cualquiera pueda usarlo a la mayor brevedad posible, sin tener
+                    que pasar largas horas en capacitaciones, ni tener que leer por completo un manual del usuario.
+                </p>
+            </div>
+
+            <div class="vision">
+                <div class="vision-contenido contenedor">
+                    <div class="vision-texto">
+                        <h4 class="no-margin">Nuestra Visión</h4>
+                        <p class="no-margin">
+                            Ser una herramienta confiable que facilite el ingreso de los datos contables de las
+                            empresas, teniendo como principal objetivo la agilización de los procesos
+                            administrativos, y financieros de los contadores que utilicen nuestro sistema.
+                        </p>
+                    </div>
+                    <picture>
+                        <source loading="lazy" srcset="src/img/vision.webp" type="image/webp">
+                        <img loading="lazy" src="src/img/vision.png" alt="Imagen Vision">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="requisitos">
+                <div class="requisitos-contenido contenedor">
+                    <div class="requisitos-texto">
+                        <p class="no-margin">
+                            <span class="bold">No tenemos requisitos minimos.</span> Para comenzar a utilizar
+                            nuestro Sistema Contable solamente necesita tener un computador, podemos trabajar tanto
+                            en computadores nuevos como en otros que ya se consideren como antiguos, lo unico que
+                            debe de tomar en cuenta es que el dispositivo que vaya a utilizar tenga Sistema
+                            Operativo <span class="bold">Windows</span>.
+                        </p>
+                    </div>
+                    <picture>
+                        <source srcset="src/img/requisitos.webp" type="image/webp">
+                        <img src="src/img/requisitos.jpg" alt="Imagen Requisitos">
+                    </picture>
+                </div>
+            </div>
+        </div>
     </section>
-
     <script defer src="src/js/app.js"></script>
 </body>
 

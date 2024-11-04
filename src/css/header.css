@@ -6,6 +6,7 @@
     background-color: var(--color-blanco);
     padding: 1.5rem;
     border-block-end: 1px solid var(--color-oscuro);
+    z-index: 10;
 }
 
 .logo {
@@ -36,12 +37,14 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
+    text-wrap: balance;
 }
 
 .navegacion a {
     color: var(--color-oscuro);
     font-size: var(--step-5);
     font-weight: var(--fw-bold);
+    text-wrap: balance;
 }
 
 .open-menu, .close-menu {
@@ -63,7 +66,7 @@
 
 @media (min-width: 768px) {
     .navegacion {
-        gap: 2.5rem;
+        gap: 3rem;
         flex-direction: row;
         position: relative;
         top: auto;
@@ -72,11 +75,16 @@
         overflow-y: hidden;
         opacity: 1;
         pointer-events: all;
+        
     }
 
     .navegacion a {
         font-size: var(--step-1);
-        font-weight: var(--fw-normal);
+        padding: 1rem;
+    }
+
+    .navegacion a:hover {
+        background-color: var(--color-principal);
     }
 
     .open-menu, .close-menu {
