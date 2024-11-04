@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas ABC</title>
+
+    <!-- Enlace a los Fuentes de Letras - Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Enlace a los archivos CSS Principales -->
+    <link rel="preload" href="src/css/main.css" as="style" />
+    <link rel="stylesheet" href="src/css/main.css">
+
+    <link rel="preload" href="src/css/normalize.css" as="style" />
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <!-- Enlace a los archivos CSS Secundarios -->
+    <link rel="stylesheet" href="src/css/header.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor header-contenido">
+            <a href="/" target="_blank" class="logo">
+                Sistemas <span class="logo-bold">ABC</span>
+            </a>
+            <button class="open-menu" aria-label="Abrir Menú">
+                <picture>
+                    <source srcset="src/img/icons/menu.webp" type="image/webp">
+                    <img src="src/img/icons/menu.png" alt="Icono de menu" width="50px" height="50px">
+                </picture>
+            </button>
+            <nav class="navegacion">
+                <button class="close-menu" aria-label="Cerrar Menú">
+                    <picture>
+                        <source srcset="src/img/icons/x.webp" type="image/webp">
+                        <img src="src/img/icons/x.png" alt="Icono de cerrar menu" width="50px" height="50px">
+                    </picture>
+                </button>
+                <a href="#inicio">Inicio</a>
+                <a href="#informacion">Información</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio">
+
+    </section>
+
+    <section id="informacion">
+
+    </section>
+
+    <script defer src="src/js/app.js"></script>
+</body>
+
+</html>

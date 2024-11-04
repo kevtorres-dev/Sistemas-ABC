@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    /* Tamaño de Letras, utilizando Clamp el cual utiliza diferentes parametros, y optimiza el rendimiento Responsive (Como el sitio web trabaja en diferentes dispositivos) */
+
+    /* Codigo sacado desde el @link https://utopia.fyi/type/calculator?c=350,18,1.2,1440,28,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step--2: clamp(0.7813rem, 0.6725rem + 0.4972vw, 1.12rem);
+    --step--1: clamp(0.9375rem, 0.789rem + 0.6789vw, 1.4rem);
+    --step-0: clamp(1.125rem, 0.9243rem + 0.9174vw, 1.75rem);
+    --step-1: clamp(1.35rem, 1.0811rem + 1.2294vw, 2.1875rem);
+    --step-2: clamp(1.62rem, 1.2622rem + 1.6358vw, 2.7344rem);
+    --step-3: clamp(1.944rem, 1.4707rem + 2.1636vw, 3.418rem);
+    --step-4: clamp(2.3328rem, 1.71rem + 2.8472vw, 4.2725rem);
+    --step-5: clamp(2.7994rem, 1.9834rem + 3.7302vw, 5.3406rem);
+
+    /* Colores de la Marca */
+    --color-principal: hsl(193, 99%, 47%); /*Color adaptado de ** #01baef ** a HSL*/
+    --color-secundario: hsl(210, 100%, 12%); /*Color adaptado de ** #001e3d ** a HSL*/
+    --color-amarillo: hsl(50, 93%, 68%); /*Color adaptado de ** #f9e062 ** a HSL*/
+
+    /* Colores Secundarios */
+    --color-blanco: hsl(0, 0%, 100%); /*Color adaptado de ** #ffffff ** a HSL*/
+    --color-oscuro: hsl(0, 0%, 0%); /*Color adaptado de ** #000000 ** a HSL*/
+    --color-fondo: hsl(96, 71%, 99%); /*Color adaptado de ** #FBFEF9 ** a HSL*/
+
+    /* Font Weight */
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    /* Fuentes de Letras */
+    --fuente-principal: "Atkinson Hyperlegible", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+}
+
+/* Indice de Tamaños de Letra*/
+
+h1 {
+    font-size: var(--step-4);
+}
+
+h2 {
+    font-size: var(--step-5);
+}
+
+h3 {
+    font-size: var(--step-3);
+}
+
+h4 {
+    font-size: var(--step-2);
+}
+
+p {
+    font-size: var(--step-1);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Fuente Principal del Cliente (Importada) - Berlin Sans FB */
+
+@font-face {
+    font-family: 'Berlin Sans';
+    font-weight: var(--fw-normal);
+    src: local('Berlin Sans FB'),
+            url('../fonts/berlin_regular.woff2'),
+                url('../fonts/berlin_regular.woff');
+}
+
+@font-face {
+    font-family: 'Berlin Sans Bold';
+    font-weight: var(--fw-bold);
+    src: local('Berlin Sans FB Bold'),
+            url('../fonts/berlin_bold.woff2'),
+                url('../fonts/berlin_bold.woff');
+}
+
+/* Clases Globales */
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin-inline: auto;
+}
+
+.logo {
+    font-family: 'Berlin Sans';
+    font-weight: var(--fw-normal);
+}
+
+.logo-bold {
+    font-family: 'Berlin Sans Bold';
+}
+
+.no-margin {
+    margin: 0;
+}
